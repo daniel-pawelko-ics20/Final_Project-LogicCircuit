@@ -206,10 +206,3 @@ class Wire:
     def update(self):
         self.inp.update()
         self.value = self.inp.value
-
-    def disconnect(self):
-        # Remove wire from output gate's input
-        for inputs in self.out.inp:
-            if inputs[0] is self:
-                inputs.pop()
-                break
